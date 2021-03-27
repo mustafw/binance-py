@@ -4,7 +4,7 @@ This module lets you get live financial reports from **www.binance.com**
 
 Installation steps:
 - Install package using `git clone https://github.com/mustafw/binance-py.git`
-- Change directory into file `cd binance-py-main`
+- Change directory into file `cd binance-py`
 - Download **requests** module through `pip install requests` or `python -m pip install requests`
 - Here you go! You may run the file with `python BinanceAPI.py` to see how module works or continue reading
 
