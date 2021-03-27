@@ -83,7 +83,7 @@ class Prices:
             currency_output["pair"] = f"{base}_{quote}"
             currency_output["fullName"] = currency["fullName"]
             currency_output["symbol"] = currency["symbol"]
-            currency_output["rate"] = float(currency["rate"])
+            currency_output["rate"] = str(float(currency["rate"]))[:4]
             currency_output["imageUrl"] = currency["imageUrl"]
         else:
             currency, currency2 = self.currencies[f"{quote}_{'USD' if quote != 'USD' else 'EUR'}"], self.currencies[
@@ -91,7 +91,7 @@ class Prices:
             currency_output["pair"] = f"{base}_{quote}"
             currency_output["fullName"] = currency2["fullName"]
             currency_output["symbol"] = currency2["symbol"]
-            currency_output["rate"] = str(float(currency["rate"]) / float(currency2["rate"]))[:5]
+            currency_output["rate"] = str(float(currency["rate"]) / float(currency2["rate"]))[:4]
             currency_output["imageUrl"] = currency2["imageUrl"]
 
         return currency_output
