@@ -1,13 +1,13 @@
 #!/usr/bin/python3
 __version__ = "0.1"
+
 import requests, json, sys, pathlib
 
 
 class CheckVersion:
     def __init__(self, update=False):
         r = requests.get("https://raw.githubusercontent.com/mustafw/binance-py/main/BinanceAPI.py").text.splitlines()[1]
-        git_version=__version__
-        exec(f'git_version{"".join(r.replace("__version__", "") if "__version__"and"=" in r else "")}')
+        git_version = eval("".join(r.replace("__version__", "") if "__version__" and "=" in r else "").replace("=", ""))
         if __version__ != git_version:
             print(
                 f"There is a new version \"{git_version}\" available on https://github.com/mustafw/binance-py! You must run CheckVersion(update=True) to update automatically")
