@@ -1,18 +1,17 @@
-A simple Binance API made for **Python3.5x** \
-This module lets you get live financial reports from **www.binance.com** 
+A simple Currency/Coin Price Scrape Module it uses Binance Web API \
 
 
 Installation steps:
 - Install package using `git clone https://github.com/mustafw/binance-py.git`
 - Change directory into file `cd binance-py`
-- Download **requests** module through `pip install requests` or `python -m pip install requests`
-- Here you go! You may run the file with `python BinanceAPI.py` to see how module works or continue reading
+- Download **requests** module `python -m pip install requests`
+- Run the module `python BinanceAPI.py` 
 
-Usage:
+Module Usage:
 -
-- import the module into yours with `import BinanceAPI`  
-- Get the **_USDT_** price of a coin live with `BinanceAPI.BinancePrices().get_coin("THE_SHORT_NAME_OF_THE_COIN", "USDT")` and you may use `pass_status=True` to pass some information about is coin able to trade
-- Get the **_EUR_** price of a currency with `BinanceAPI.BinancePrices().get_currency("THE_SHORT_NAME_OF_THE_CURRENCY", "EUR")`
+- import the module into yours with `import BinanceScrape`  
+- Get the **_USDT_** price of a coin live with `BinanceScrape.Prices().get_coin("FROM THIS", "TO THIS")`
+- Get the **_EUR_** price of a currency with `BinanceScrape.Prices().get_currency("FROM THIS", "TO THIS")`
 
 
 
